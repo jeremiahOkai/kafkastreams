@@ -1,0 +1,23 @@
+[2024-09-30T09:31:30.174+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-09-30T09:31:30.186+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_DAG.kafka_dat scheduled__2024-09-30T09:31:00+00:00 [queued]>
+[2024-09-30T09:31:30.190+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_DAG.kafka_dat scheduled__2024-09-30T09:31:00+00:00 [queued]>
+[2024-09-30T09:31:30.191+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-09-30T09:31:30.198+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): kafka_dat> on 2024-09-30 09:31:00+00:00
+[2024-09-30T09:31:30.200+0000] {standard_task_runner.py:72} INFO - Started process 1977 to run task
+[2024-09-30T09:31:30.202+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'kafka_DAG', 'kafka_dat', 'scheduled__2024-09-30T09:31:00+00:00', '--job-id', '102', '--raw', '--subdir', 'DAGS_FOLDER/getdata.py', '--cfg-path', '/tmp/tmpp9up1w_4']
+[2024-09-30T09:31:30.203+0000] {standard_task_runner.py:105} INFO - Job 102: Subtask kafka_dat
+[2024-09-30T09:31:30.242+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_DAG.kafka_dat scheduled__2024-09-30T09:31:00+00:00 [running]> on host 76199f2e6caf
+[2024-09-30T09:31:30.298+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='kafka_DAG' AIRFLOW_CTX_TASK_ID='kafka_dat' AIRFLOW_CTX_EXECUTION_DATE='2024-09-30T09:31:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-30T09:31:00+00:00'
+[2024-09-30T09:31:30.299+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-09-30T09:31:30.347+0000] {logging_mixin.py:190} WARNING - [2024-09-30 09:31:30,347] [INFO] [quixstreams] : Topics required for this application:
+[2024-09-30T09:31:30.348+0000] {logging_mixin.py:190} WARNING - [2024-09-30 09:31:30,348] [DEBUG] [quixstreams] : No topics provided for creation...skipping!
+[2024-09-30T09:31:30.348+0000] {logging_mixin.py:190} WARNING - [2024-09-30 09:31:30,348] [INFO] [quixstreams] : Validating Kafka topics exist and are configured correctly...
+[2024-09-30T09:31:30.351+0000] {logging_mixin.py:190} WARNING - [2024-09-30 09:31:30,351] [INFO] [quixstreams] : Kafka topics validation complete
+[2024-09-30T09:31:30.461+0000] {logging_mixin.py:190} WARNING - [2024-09-30 09:31:30,461] [DEBUG] [quixstreams] : Flushing kafka producer
+[2024-09-30T09:31:30.464+0000] {logging_mixin.py:190} WARNING - [2024-09-30 09:31:30,464] [DEBUG] [quixstreams] : Kafka producer flushed
+[2024-09-30T09:31:30.465+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-09-30T09:31:30.474+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-09-30T09:31:30.478+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=kafka_DAG, task_id=kafka_dat, run_id=scheduled__2024-09-30T09:31:00+00:00, execution_date=20240930T093100, start_date=20240930T093130, end_date=20240930T093130
+[2024-09-30T09:31:30.511+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-09-30T09:31:30.525+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-09-30T09:31:30.527+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
